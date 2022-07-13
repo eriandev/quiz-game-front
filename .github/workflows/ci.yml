@@ -1,0 +1,10 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches: [main, dev]
+    types: [opened, synchronize]
+
+jobs:
+  qa:
+    uses: ./.github/workflows/qa.yml
