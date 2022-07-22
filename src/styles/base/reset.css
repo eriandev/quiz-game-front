@@ -20,7 +20,13 @@ html {
 
 body {
   margin: 0;
+  display: grid;
+  min-height: 100vh;
+  position: relative;
+  place-items: center;
   line-height: inherit;
+  background: #0E6A6A url('icons/bg.svg') no-repeat center;
+  background-size: 600px;
 }
 
 h1,
