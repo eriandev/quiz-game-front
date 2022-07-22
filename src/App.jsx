@@ -1,7 +1,9 @@
+import Title from './components/Title.jsx'
+
 function App () {
   return (
     <main>
-      <h1>Quiz Game</h1>
+      <Title>QUIZ GAME</Title>
     </main>
   )
 }
