@@ -1,0 +1,24 @@
+:root {
+  --color-white: #FFF;
+  --color-black: #333;
+  --color-primary: #157A7A;
+
+  --size-3xs: 0.25rem;  /* 4px */
+  --size-2xs: 0.5rem;   /* 8px */
+  --size-xs: 0.75rem;   /* 12px */
+  --size-sm: 0.875rem;  /* 14px */
+  --size-base: 1rem;    /* 16px */
+  --size-md: 1.125rem;  /* 18px */
+  --size-lg: 1.25rem;   /* 20px */
+  --size-xl: 1.5rem;    /* 24px */
+  --size-2xl: 1.75rem;  /* 28px */
+  --size-3xl: 2rem;     /* 32px */
+  --size-4xl: 2.25rem;  /* 36px */
+  --size-5xl: 2.5rem;   /* 40px */
+  --size-6xl: 3rem;     /* 48px */
+  --size-999: 999px;
+
+  --rounded: 50px;
+
+  --font-mali: 'Mali', cursive, sans-serif;
+}

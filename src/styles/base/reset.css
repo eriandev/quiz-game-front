@@ -2,21 +2,25 @@
 :after,
 :before {
   border: 0 solid #e5e7eb;
-  box-sizing: border-box
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
 }
 
 html {
   -webkit-text-size-adjust: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-mali);
   line-height: 1.5;
   -moz-tab-size: 4;
   -o-tab-size: 4;
-  tab-size: 4
+  tab-size: 4;
 }
 
 body {
+  margin: 0;
   line-height: inherit;
-  margin: 0
 }
 
 h1,
@@ -26,25 +30,25 @@ h4,
 h5,
 h6 {
   font-size: inherit;
-  font-weight: inherit
+  font-weight: inherit;
 }
 
 a {
   color: inherit;
-  text-decoration: inherit
+  text-decoration: inherit;
 }
 
 b,
 strong {
-  font-weight: bolder
+  font-weight: bolder;
 }
 
 code,
 kbd,
 pre,
 samp {
+  font-size: 1em;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  font-size: 1em
 }
 
 input,
@@ -57,12 +61,12 @@ textarea {
   font-weight: inherit;
   line-height: inherit;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 button,
 select {
-  text-transform: none
+  text-transform: none;
 }
 
 [type=button],
@@ -71,42 +75,42 @@ select {
 button {
   -webkit-appearance: button;
   background-color: transparent;
-  background-image: none
+  background-image: none;
 }
 
 :-moz-focusring {
-  outline: auto
+  outline: auto;
 }
 
 :-moz-ui-invalid {
-  box-shadow: none
+  box-shadow: none;
 }
 
 progress {
-  vertical-align: baseline
+  vertical-align: baseline;
 }
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-  height: auto
+  height: auto;
 }
 
 [type=search] {
   -webkit-appearance: textfield;
-  outline-offset: -2px
+  outline-offset: -2px;
 }
 
 ::-webkit-search-decoration {
-  -webkit-appearance: none
+  -webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  font: inherit
+  font: inherit;
 }
 
 summary {
-  display: list-item
+  display: list-item;
 }
 
 h1,
@@ -118,16 +122,16 @@ h6,
 hr,
 p,
 pre {
-  margin: 0
+  margin: 0;
 }
 
 fieldset {
-  margin: 0
+  margin: 0;
 }
 
 fieldset,
 legend {
-  padding: 0
+  padding: 0;
 }
 
 menu,
@@ -135,36 +139,36 @@ ol,
 ul {
   margin: 0;
   padding: 0;
-  list-style: none
+  list-style: none;
 }
 
 textarea {
-  resize: vertical
+  resize: vertical;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   color: #9ca3af;
-  opacity: 1
+  opacity: 1;
 }
 
 input::placeholder,
 textarea::placeholder {
   color: #9ca3af;
-  opacity: 1
+  opacity: 1;
 }
 
 [role=button],
 button {
-  cursor: pointer
+  cursor: pointer;
 }
 
 :disabled {
-  cursor: default
+  cursor: default;
 }
 
 img,
 video {
   height: auto;
-  max-width: 100%
+  max-width: 100%;
 }
