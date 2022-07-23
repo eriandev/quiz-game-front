@@ -5,8 +5,10 @@ function App () {
   return (
     <main>
       <Title>QUIZ GAME</Title>
-      <Button>LOG IN</Button>
-      <Button>SIGN UP</Button>
+      <section className='actions'>
+        <Button>LOG IN</Button>
+        <Button>SIGN UP</Button>
+      </section>
     </main>
   )
 }
