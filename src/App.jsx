@@ -1,15 +1,11 @@
-import Title from './components/Title.jsx'
-import Button from './components/Button.jsx'
+import { Route, Switch } from 'wouter'
+import Home from './pages/home'
 
 function App () {
   return (
-    <main>
-      <Title>QUIZ GAME</Title>
-      <section className='actions'>
-        <Button>LOG IN</Button>
-        <Button>SIGN UP</Button>
-      </section>
-    </main>
+    <Switch>
+      <Route path='/' component={Home} />
+    </Switch>
   )
 }
 
