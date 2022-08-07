@@ -14,7 +14,7 @@ function Login () {
         <Title>QUIZ GAME</Title>
 
         <form>
-          <section class='inputs'>
+          <section className='inputs'>
             <Input value={username} setValue={setUsername} label='username' />
             <Input type='password' value={password} setValue={setPassword} label='password' />
           </section>
