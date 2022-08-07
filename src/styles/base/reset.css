@@ -20,13 +20,16 @@ html {
 
 body {
   margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
   display: grid;
   min-height: 100vh;
   position: relative;
   place-items: center;
   line-height: inherit;
   background: #0E6A6A url('icons/bg.svg') no-repeat center;
-  -webkit-tap-highlight-color: transparent;
   background-size: 600px;
 }
 
