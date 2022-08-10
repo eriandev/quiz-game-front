@@ -1,8 +1,8 @@
 import { useState } from 'react'
+import Link from '../components/Link.jsx'
 import Back from '../components/Back.jsx'
 import Title from '../components/Title.jsx'
 import Input from '../components/Input.jsx'
-import Button from '../components/Button.jsx'
 
 function Login () {
   const [username, setUsername] = useState('')
@@ -19,7 +19,7 @@ function Login () {
             <Input type='password' value={password} setValue={setPassword} label='password' />
           </section>
 
-          <Button>LOG IN</Button>
+          <Link className='btn' href='/logged'>LOG IN</Link>
         </form>
       </main>
 
