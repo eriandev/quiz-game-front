@@ -1,0 +1,18 @@
+[
+    {
+        "id": "1",
+        "category": "Cine"
+    },
+    {
+        "id": "2",
+        "category": "Deportes"
+    },
+    {
+        "id": "3",
+        "category": "Historia"
+    },
+    {
+        "id": "4",
+        "category": "Musica"
+    }
+]
