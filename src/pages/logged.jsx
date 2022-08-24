@@ -5,7 +5,7 @@ import Back from '../components/Back.jsx'
 function Logged () {
   return (
     <>
-      <header>
+      <header className='welcomeHeader'>
         <h2 className='welcome'>Hi, "USERNAME"</h2>
       </header>
       <main>

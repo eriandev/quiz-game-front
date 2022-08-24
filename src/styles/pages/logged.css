@@ -1,4 +1,4 @@
-header {
+.welcomeHeader {
   position: absolute;
   top: var(--size-base);
   left: var(--size-base);
