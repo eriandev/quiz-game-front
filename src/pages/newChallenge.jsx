@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 import Title from '../components/Title.jsx'
 import Category from '../components/Category.jsx'
 import Question from '../components/Question.jsx'
@@ -6,6 +7,7 @@ import Header from '../components/Header.jsx'
 import db from '@/firebase/firebaseConfig.js'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { useState, useEffect } from 'react'
+import { SpinnerWidget } from '@/components/Spinner.jsx'
 
 function NewChallenge () {
   const [question, setQuestion] = useState({})
@@ -27,9 +29,13 @@ function NewChallenge () {
     <>
       <Header />
       <main>
-        <Title>QUIZ GAME</Title>
-        <Category category={question.category} />
-        <Question question={question} />
+        {question.imgUrl ?
+          <>
+            <Title>QUIZ GAME</Title>
+            <Category category={question.category} />
+            <Question question={question} />
+          </>
+          : <SpinnerWidget />}
       </main>
       <Exit />
     </>
