@@ -12,14 +12,14 @@ import { SpinnerWidget } from '@/components/Spinner.jsx'
 function NewChallenge () {
   const [question, setQuestion] = useState({})
 
-  function getRandomInt (min, max) {
+  function getRandomId (min, max) {
     min = Math.ceil(min)
     max = Math.floor(max)
     return Math.floor(Math.random() * (max - min) + min)
   }
 
   useEffect(() => {
-    const randomId = getRandomInt(1, 20).toString()
+    const randomId = getRandomId(1, 20).toString()
     const randomQuestion = query(collection(db, 'questions'), where('id', '==', randomId))
     getDocs(randomQuestion)
       .then(res => res.forEach(snap => setQuestion(snap.data())))
