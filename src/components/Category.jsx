@@ -1,7 +1,7 @@
-function Category () {
+function Category ({ category }) {
   return (
     <div className='categoryBox'>
-      <h2>FILMS</h2>
+      <h2>{category}</h2>
     </div>
   )
 }
