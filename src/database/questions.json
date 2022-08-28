@@ -1,0 +1,122 @@
+[
+    {
+        "id": "1",
+        "question": "Quien es el protagonista de Titanic?",
+        "imgUrl": "https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2019/03/hipertextual-primera-pelicula-sobre-titanic-protagonizo-actriz-superviviente-catastrofe-2019738535.jpg?fit=1200%2C800&quality=50&strip=all&ssl=1",
+        "category": "Cine"
+    },
+    {
+        "id": "2",
+        "question": "Quien es el actor de la foto?",
+        "imgUrl": "https://images.ecestaticos.com/aitbRo9qhCn6MsSdVfBQ8MBHzng=/0x0:2272x1796/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fa84%2F18a%2F1b7%2Fa8418a1b7bea589153537d08e664aa0f.jpg",
+        "category": "Cine"
+    },
+    {
+        "id": "3",
+        "question": "Quien es la actriz de la foto?",
+        "imgUrl": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/IV5NR6YFEJFQRLK376JJRR7RFM.jpg",
+        "category": "Cine"
+    },
+    {
+        "id": "4",
+        "question": "Quien es el director de \"Medianoche en Paris\"?",
+        "imgUrl": "https://pbs.twimg.com/media/Ek3YkXkW0AQVEQ_.jpg",
+        "category": "Cine"
+    },
+    {
+        "id": "5",
+        "question": "Cual es la pelicula de la foto?",
+        "imgUrl": "https://cloudfront-us-east-1.images.arcpublishing.com/artear/C4JH25DATFC5VKF4G4MJ6J36N4.jpg",
+        "category": "Cine"
+    },
+    {
+        "id": "6",
+        "question": "Quien es el jugador de la foto?",
+        "imgUrl": "https://dtvsportsimages.akamaized.net/images/21d6823f-f593-43d9-9ff6-bbe0143e8b63?width=726",
+        "category": "Deportes"
+    },
+    {
+        "id": "7",
+        "question": "Quien es la tenista de la foto?",
+        "imgUrl": "https://st1.uvnimg.com/2d/8f/5cd673724909b951d18467208dcf/maria-sharapova.jpg",
+        "category": "Deportes"
+    },
+    {
+        "id": "8",
+        "question": "En que equipo no jugó Maradona?",
+        "imgUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/muere-maradona-1606326764.jpg?crop=0.845xw:1.00xh;0.0783xw,0&resize=640:*",
+        "category": "Deportes"
+    },
+    {
+        "id": "9",
+        "question": "Quien gano mas veces Roland Garros?",
+        "imgUrl": "https://www.puntodebreak.com/files/roland-garros.png",
+        "category": "Deportes"
+    },
+    {
+        "id": "10",
+        "question": "Con quien no compartio equipo Messi?",
+        "imgUrl": "https://media.gq.com.mx/photos/5ffb662e9274cd36fe35683c/master/pass/messi-cerveza-goles-porteros.jpg",
+        "category": "Deportes"
+    },
+    {
+        "id": "11",
+        "question": "En que año sucedio el atentado del 11-09?",
+        "imgUrl": "https://ichef.bbci.co.uk/news/640/cpsprodpb/160DF/production/_108753309_gettyimages-1339505-1.jpg",
+        "category": "Historia"
+    },
+    {
+        "id": "12",
+        "question": "Cuando sucedio la segunda guerra mundial?",
+        "imgUrl": "https://okdiario.com/img/2017/01/19/segunda-guerra-mundial-655x368.jpeg",
+        "category": "Historia"
+    },
+    {
+        "id": "13",
+        "question": "Donde nacio Napoleon Bonaparte?",
+        "imgUrl": "https://www.biografiasyvidas.com/monografia/napoleon/fotos/napoleon_420a.jpg",
+        "category": "Historia"
+    },
+    {
+        "id": "14",
+        "question": "En que año sucedio el accidente de Chernobyl?",
+        "imgUrl": "https://ichef.bbci.co.uk/news/640/cpsprodpb/E616/production/_107320985_chernobyl2.jpg",
+        "category": "Historia"
+    },
+    {
+        "id": "15",
+        "question": "Como se llama el primer hombre en pisar la Luna?",
+        "imgUrl": "https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2019/07/19/5fa533a755ccd.r_d.340-110-0.jpeg",
+        "category": "Historia"
+    },
+    {
+        "id": "16",
+        "question": "Quien era el mas joven de los Beatles?",
+        "imgUrl": "https://img2.rtve.es/i/?w=1600&i=1565264925747.jpg",
+        "category": "Musica"
+    },
+    {
+        "id": "17",
+        "question": "Como se llamaba realmente Freddie Mercury?",
+        "imgUrl": "https://imagenes.elpais.com/resizer/APA8qGeO9de83IjiKLbWVmMMHlA=/1960x1470/cloudfront-eu-central-1.images.arcpublishing.com/prisa/HVLLDNZSYX43DHYSXU45U4EWGQ.jpg",
+        "category": "Musica"
+    },
+    {
+        "id": "18",
+        "question": "Cual de estas canciones no es de los Rolling Stones?",
+        "imgUrl": "https://static.dw.com/image/62428496_303.jpg",
+        "category": "Musica"
+    },
+    {
+        "id": "19",
+        "question": "En que año nacio Daddy Yankee?",
+        "imgUrl": "https://www.cmtv.com.ar/imagenes_artistas/332.jpg?Daddy%20Yankee",
+        "category": "Musica"
+    },
+    {
+        "id": "20",
+        "question": "En que año murio Elvis Presley?",
+        "imgUrl": "https://www.biografiasyvidas.com/biografia/p/fotos/presley_elvis_1.jpg",
+        "category": "Musica"
+    }
+]
