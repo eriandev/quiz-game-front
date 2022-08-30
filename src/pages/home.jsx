@@ -6,8 +6,8 @@ function Home () {
     <main>
       <Title>QUIZ GAME</Title>
       <section className='actions'>
-        <Link className='btn' href='/login'>LOG IN</Link>
-        <Link className='btn' href='/signup'>SIGN UP</Link>
+        <Link className='btn' href='/login'>INGRESAR</Link>
+        <Link className='btn' href='/signup'>REGISTRARSE</Link>
       </section>
     </main>
   )
