@@ -1,0 +1,10 @@
+form {
+  margin: var(--size-3xl) auto 0;
+  max-width: 216px;
+}
+
+.inputs {
+  display: grid;
+  gap: var(--size-md);
+  margin-bottom: var(--size-4xl);
+}

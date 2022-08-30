@@ -1,0 +1,12 @@
+.back {
+  display: grid;
+  position: absolute;
+  height: min-content;
+  place-items: center;
+  background: #0E6A6A;
+  left: var(--size-base);
+  bottom: var(--size-base);
+  border-radius: var(--rounded);
+  padding: var(--size-base) var(--size-xl);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.4), inset 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+}

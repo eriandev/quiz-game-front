@@ -1,0 +1,7 @@
+.actions {
+  display: grid;
+  margin: 0 auto;
+  width: 216px;
+  margin-top: 4rem;
+  gap: var(--size-5xl);
+}

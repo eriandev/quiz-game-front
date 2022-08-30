@@ -1,0 +1,5 @@
+[
+{"id":"1","username":"admin","email":"admin@gmail.com","password":"admin123456","score":20},
+{"id":"2","username":"random1","email":"random1@gmail.com","password":"random123456","score":50},
+{"id":"3","username":"random2","email":"random2@gmail.com","password":"random23456","score":60}
+]
