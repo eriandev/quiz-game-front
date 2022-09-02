@@ -1,10 +1,9 @@
 /* eslint-disable operator-linebreak */
 /* eslint-disable eqeqeq */
 import Button from './Button'
-import db from '@/firebase/firebaseConfig.js'
-import { collection, getDocs, query, where } from 'firebase/firestore'
 import { useState, useEffect } from 'react'
 import { SpinnerWidget } from './Spinner'
+import { getOptions, newRandomQuestion } from '@/firebase/services'
 
 function Question () {
   const [loading, setLoading] = useState(true)
@@ -13,43 +12,18 @@ function Question () {
   const [question, setQuestion] = useState({})
   const [questionCounter, setQuestionCounter] = useState([])
 
-  function getRandomId (min, max) {
-    min = Math.ceil(min)
-    max = Math.floor(max)
-    return Math.floor(Math.random() * (max - min) + min)
-  }
-
-  async function newQuestion () {
-    const questionLength = (await getDocs(collection(db, 'questions'))).docs.length
-    const randomId = getRandomId(1, questionLength).toString()
-    const randomQuestion = query(collection(db, 'questions'), where('id', '==', randomId))
-    return await getDocs(randomQuestion)
-      .then(res => {
-        const questionGet = (res.docs[0].data())
-        setQuestion(questionGet)
-        return questionGet
-      })
-  }
-
-  async function getOptions (el) {
-    const optionsFound = el.id ? query(collection(db, 'answers'), where('questionId', '==', el.id)) : null
-    if (optionsFound !== null) {
-      return await getDocs(optionsFound)
-        .then(res => {
-          const optionsToSet = res.docs.map(doc => {
-            return doc.data()
-          })
-          setOptions(optionsToSet.sort(() => Math.random() - 0.5))
-          return optionsToSet
-        })
-    }
-  }
-
   useEffect(() => {
+    setLoading(true)
     if (questionCounter.length < 5) {
-      newQuestion()
-        .then(res => getOptions(res))
-        .finally(() => setLoading(false))
+      newRandomQuestion()
+        .then(res => {
+          setQuestion(res)
+          getOptions(res)
+            .then(data => setOptions(data))
+        })
+        .finally(() => {
+          setLoading(false)
+        })
     }
   }, [questionCounter])
 
@@ -61,7 +35,7 @@ function Question () {
     const incorrectArray = ['', '', '']
     incorrectArray[index] = 'btnIncorrect'
     options[index].isCorrect === true ? setResult(correctArray) : setResult(incorrectArray)
-    setTimeout(() => nextQuestion(), 1500)
+    setTimeout(() => nextQuestion(), 1000)
   }
 
   function nextQuestion () {
@@ -81,9 +55,9 @@ function Question () {
           <h3 className='question'>{question.question}</h3>
           <img className='questionImage' src={question.imgUrl} alt='actor' />
           <div className='answers'>
-            <Button action={getResult} id={result[0]}>{options[0].answer}</Button>
-            <Button action={getResult} id={result[1]}>{options[1].answer}</Button>
-            <Button action={getResult} id={result[2]}>{options[2].answer}</Button>
+            <Button action={getResult} id={result[0]}>{options[0] ? options[0].answer : ''}</Button>
+            <Button action={getResult} id={result[1]}>{options[1] ? options[1].answer : ''}</Button>
+            <Button action={getResult} id={result[2]}>{options[2] ? options[2].answer : ''}</Button>
           </div>
         </>}
     </>
