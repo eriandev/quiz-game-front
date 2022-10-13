@@ -3,11 +3,10 @@
 import Button from './Button'
 import { useState, useEffect } from 'react'
 import { SpinnerWidget } from './Spinner'
-import { getOptions, newRandomQuestion } from '@/firebase/services'
+import { newRandomQuestion } from '@/firebase/services'
 
 function Question () {
   const [loading, setLoading] = useState(true)
-  const [options, setOptions] = useState([])
   const [result, setResult] = useState([])
   const [question, setQuestion] = useState({})
   const [questionCounter, setQuestionCounter] = useState([])
@@ -18,8 +17,6 @@ function Question () {
       newRandomQuestion()
         .then(res => {
           setQuestion(res)
-          getOptions(res)
-            .then(data => setOptions(data))
         })
         .finally(() => {
           setLoading(false)
@@ -29,12 +26,13 @@ function Question () {
 
   function getResult (e) {
     e.preventDefault()
-    const index = options.findIndex(doc => doc.answer == e.target.innerText)
+    const selectedAnswer = e.target.innerText
+    const index = question.disorderedOptions.findIndex(el => el === selectedAnswer)
     const correctArray = ['', '', '']
     correctArray[index] = 'btnCorrect'
     const incorrectArray = ['', '', '']
     incorrectArray[index] = 'btnIncorrect'
-    options[index].isCorrect === true ? setResult(correctArray) : setResult(incorrectArray)
+    selectedAnswer === question.correctAnswer ? setResult(correctArray) : setResult(incorrectArray)
     setTimeout(() => nextQuestion(), 1000)
   }
 
@@ -55,9 +53,9 @@ function Question () {
           <h3 className='question'>{question.question}</h3>
           <img className='questionImage' src={question.imgUrl} alt='actor' />
           <div className='answers'>
-            <Button action={getResult} id={result[0]}>{options[0] ? options[0].answer : ''}</Button>
-            <Button action={getResult} id={result[1]}>{options[1] ? options[1].answer : ''}</Button>
-            <Button action={getResult} id={result[2]}>{options[2] ? options[2].answer : ''}</Button>
+            <Button action={getResult} id={result[0]}>{question.disorderedOptions[0]}</Button>
+            <Button action={getResult} id={result[1]}>{question.disorderedOptions[1]}</Button>
+            <Button action={getResult} id={result[2]}>{question.disorderedOptions[2]}</Button>
           </div>
         </>}
     </>

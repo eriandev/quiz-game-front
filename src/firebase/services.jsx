@@ -11,15 +11,14 @@ export async function newRandomQuestion () {
       const questionGet = (res.docs[0].data())
       return questionGet
     })
+    .then(res => {
+      res.disorderedOptions = sortOptions(res)
+      return res
+    })
 }
 
-export async function getOptions (doc) {
-  const optionsFound = query(collection(db, 'answers'), where('questionId', '==', doc.id))
-  return await getDocs(optionsFound)
-    .then(res => {
-      const optionsToSet = res.docs.map(doc => {
-        return doc.data()
-      })
-      return optionsToSet.sort(() => Math.random() - 0.5)
-    })
+function sortOptions (obj) {
+  const disorderedOptions = [obj.correctAnswer, obj.wrongAnswer1, obj.wrongAnswer2]
+  console.log(disorderedOptions.sort(() => Math.random() - 0.5))
+  return disorderedOptions.sort(() => Math.random() - 0.5)
 }
