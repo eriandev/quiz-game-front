@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import db from './firebase/firebaseConfig'
 
 useEffect(() => {
-  fetch('../src/database/questions.json')
+  fetch('...')
     .then((res) => res.json())
     .then((res) => { res.forEach((el) => addDoc(collection(db, 'questions'), el)) })
 }, [])

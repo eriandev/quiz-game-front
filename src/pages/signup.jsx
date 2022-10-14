@@ -26,6 +26,7 @@ function Signup () {
       email,
       password,
       score: 0,
+      maxScore: 0,
       username
     }
     if (!userFound.empty) {
