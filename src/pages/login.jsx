@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Button from '@/components/Button.jsx'
 import Back from '../components/Back.jsx'
 import Title from '../components/Title.jsx'
@@ -8,8 +8,11 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 import db from '@/firebase/firebaseConfig.js'
 import swal from 'sweetalert'
 import { useLocation } from 'wouter'
+import UserContext from '@/context/index.jsx'
 
 function Login () {
+  const { user, setUser } = useContext(UserContext)
+
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [location, setLocation] = useLocation()
@@ -20,7 +23,14 @@ function Login () {
     const user = query(usersRef, where('username', '==', username))
     const userDoc = await getDocs(user)
     userDoc.forEach(doc => {
+      const maxScore = doc.maxScore
       if (doc.data().password === password) {
+        setUser({
+          password,
+          score: 0,
+          maxScore,
+          username
+        })
         swal('', 'Puede ingresar', 'success')
           .then(() => setLocation('/logged'))
       } else {

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Button from '@/components/Button.jsx'
 import Back from '../components/Back.jsx'
 import Title from '../components/Title.jsx'
@@ -8,8 +8,11 @@ import { addDoc, collection, getDocs, query, where } from 'firebase/firestore'
 import db from '@/firebase/firebaseConfig.js'
 import swal from 'sweetalert'
 import { useLocation } from 'wouter'
+import UserContext from '@/context/index.jsx'
 
 function Signup () {
+  const { user, setUser } = useContext(UserContext)
+
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
@@ -35,8 +38,10 @@ function Signup () {
       swal('', 'El email ya se encuentra registrado', 'warning')
     } else {
       const newUserCreated = await addDoc(usersRef, newUser)
+      setUser(newUser)
       console.log(`New user created with ID: ${newUserCreated.id}`)
-      setLocation('/logged')
+      swal('', 'Usuario registrado correctamente', 'success')
+        .then(() => setLocation('/logged'))
     }
   }
 
